@@ -11,8 +11,16 @@ copyright.addEventListener("click", () => {
 
     player1.src = `images/dice${diceValuePlayer1}.png`;
     player2.src = `images/dice${diceValuePlayer2}.png`;
+
+    changeScoreboard(diceValuePlayer1, diceValuePlayer2);
   }, 2002);
 });
+
+const changeScoreboard = (dicePlayer1, dicePlayer2) => {
+  dicePlayer1 > dicePlayer2
+    ? (scoreboard.innerHTML = "The winner player 1")
+    : (scoreboard.innerHTML = "The winner player 2");
+};
 
 const loadingState = () => {
   const loadingPlayer1 = setInterval(() => {
