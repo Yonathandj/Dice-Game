@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
 
 const changeScoreboard = (dicePlayer1, dicePlayer2) => {
   dicePlayer1 === dicePlayer2
-    ? "Draw"
+    ? (scoreboard.innerHTML = "Draw")
     : dicePlayer1 > dicePlayer2
     ? (scoreboard.innerHTML = "Player One Win")
     : (scoreboard.innerHTML = "Player Two Win");
