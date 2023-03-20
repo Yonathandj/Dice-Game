@@ -3,7 +3,7 @@ const player1 = document.querySelector(".player-1");
 const player2 = document.querySelector(".player-2");
 const copyright = document.querySelector(".copyright");
 
-copyright.addEventListener("click", () => {
+window.addEventListener("load", () => {
   loadingState();
   setTimeout(() => {
     const diceValuePlayer1 = randomDiceNumber();
@@ -17,9 +17,11 @@ copyright.addEventListener("click", () => {
 });
 
 const changeScoreboard = (dicePlayer1, dicePlayer2) => {
-  dicePlayer1 > dicePlayer2
-    ? (scoreboard.innerHTML = "The winner player 1")
-    : (scoreboard.innerHTML = "The winner player 2");
+  dicePlayer1 === dicePlayer2
+    ? "Draw"
+    : dicePlayer1 > dicePlayer2
+    ? (scoreboard.innerHTML = "Player One Win")
+    : (scoreboard.innerHTML = "Player Two Win");
 };
 
 const loadingState = () => {
