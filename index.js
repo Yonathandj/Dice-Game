@@ -1,9 +1,9 @@
 const scoreboard = document.querySelector(".scoreboard");
 const player1 = document.querySelector(".player-1");
 const player2 = document.querySelector(".player-2");
-const copyright = document.querySelector(".copyright");
+const winnerBtn = document.querySelector(".winner-btn");
 
-window.addEventListener("load", () => {
+winnerBtn.addEventListener("click", () => {
   loadingState();
   setTimeout(() => {
     const diceValuePlayer1 = randomDiceNumber();

@@ -32,13 +32,41 @@ body {
   letter-spacing: 1.2px;
   font-family: "Ubuntu", sans-serif;
 }
-.copyright {
+.winner-btn-box {
+  display: flex;
+  padding-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.winner-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
   color: #cbe4de;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  transition: 0.2s all;
+  letter-spacing: 1.2px;
+  font-variant: small-caps;
+  background-color: #0e8388;
+  font-family: "Ubuntu", sans-serif;
+}
+.winner-btn:hover {
+  color: #0e8388;
+  background-color: #cbe4de;
+}
+.winner-btn:active {
+  transform: scale(0.95);
+}
+.copyright {
   font-size: 1rem;
-  padding-top: 10rem;
+  color: #cbe4de;
+  padding-top: 6rem;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
+
 @media only screen and (max-width: 600px) {
   html {
     font-size: 0.8rem;
